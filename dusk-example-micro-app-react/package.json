@@ -45,7 +45,6 @@
             "prettier --write"
         ]
     },
-    "proxy": "http://cbt-bi-dev.wmsnextdev.loghub.com/",
     "scripts": {
         "start": "craco start",
         "build": "craco build",
