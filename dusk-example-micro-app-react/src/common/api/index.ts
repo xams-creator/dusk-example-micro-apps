@@ -6,9 +6,7 @@ export function oauth2Login() {
 }
 
 export function create() {
-    return axios.post('/api/creation/tableModels_1698379222735', {
-        foo: 'bar',
-    });
+    return axios.post('/apiGateway/generateSignUrl?showapi_apiCode=9');
 }
 
 export default {

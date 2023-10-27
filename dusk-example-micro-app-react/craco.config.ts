@@ -17,7 +17,7 @@ export default defineCraco({
         },
         proxy: {
             '/api': {
-                target: 'https://yapi.loghub.com/mock/198/',
+                target: 'https://www.showapi.com/',
                 changeOrigin: true,
             },
         },
