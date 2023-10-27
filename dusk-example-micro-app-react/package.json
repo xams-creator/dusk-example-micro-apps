@@ -1,0 +1,83 @@
+{
+    "name": "dusk-example-micro-app-react",
+    "version": "0.0.1",
+    "private": true,
+    "workspaces": [
+        "src",
+        "packages/**"
+    ],
+    "dependencies": {
+        "@micro-zoe/micro-app": "^1.0.0-rc.1",
+        "@xams-framework/dusk": "1.2.1",
+        "lodash": "^4.17.21",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.16.0",
+        "normalize.css": "^8.0.1",
+        "uuid": "^9.0.1"
+    },
+    "devDependencies": {
+        "@craco/craco": "^7.1.0",
+        "@craco/types": "^7.1.0",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "@types/jest": "^27.5.2",
+        "@types/lodash": "^4.14.188",
+        "@types/node": "^16.11.66",
+        "@types/react": "^18.0.21",
+        "@types/react-dom": "^18.0.6",
+        "@types/redux-logger": "^3.0.9",
+        "lint-staged": "^13.1.0",
+        "prettier": "^2.8.7",
+        "react-scripts": "^5.0.1",
+        "sass": "^1.55.0",
+        "typescript": "^4.9.5",
+        "yorkie": "^2.0.0",
+        "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    },
+    "gitHooks": {
+        "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+            "prettier --write"
+        ]
+    },
+    "proxy": "http://cbt-bi-dev.wmsnextdev.loghub.com/",
+    "scripts": {
+        "start": "craco start",
+        "build": "craco build",
+        "test": "craco test",
+        "prettier": "prettier --write ."
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ],
+        "rules": {
+            "jsx-a11y/anchor-is-valid": "off",
+            "no-undef": "off",
+            "no-restricted-globals": "off",
+            "no-unused-vars": "off",
+            "no-new-func": "off",
+            "import/no-anonymous-default-export": "off",
+            "@typescript-eslint/no-unused-vars": "off",
+            "no-template-curly-in-string": "off"
+        }
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
