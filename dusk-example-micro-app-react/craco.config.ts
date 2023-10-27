@@ -15,6 +15,12 @@ export default defineCraco({
         client: {
             overlay: false,
         },
+        proxy: {
+            '/api': {
+                target: 'https://yapi.loghub.com/mock/198/',
+                changeOrigin: true,
+            },
+        },
         // headers: {
         //     'Access-Control-Allow-Origin': '*',
         // },
