@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8' />
+    <link rel='icon' type='image/svg+xml' href='/vite.svg' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Vite Test Reporter</title>
+</head>
+<body>
+<div id='dojo-app' />
+</body>
+<script>
+    window.dojoConfig = {
+        async: true,
+        isDebug: true,
+        baseUrl: './node_modules/dojo',
+        packages: [
+            {
+                name: 'app',
+                location: '/src/',
+            },
+        ],
+        deps: ['app/index'],
+        callback: function(app) {
+            app.startup({});
+        },
+    };
+</script>
+<script type='module'>
+    import 'dojo/dojo.js';
+</script>
+</html>

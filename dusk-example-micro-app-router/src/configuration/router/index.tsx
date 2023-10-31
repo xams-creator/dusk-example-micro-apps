@@ -12,6 +12,25 @@ function useSegmentedLocationPathNames() {
     return defaultSelectedKeys;
 }
 
+const apps = [
+    {
+        key: 'app0',
+        label: '基座',
+    },
+    {
+        key: 'app1',
+        label: 'React子应用',
+    },
+    {
+        key: 'app2',
+        label: 'app2',
+    },
+    {
+        key: 'app3',
+        label: 'Vite子应用',
+    },
+];
+
 function AppsContainer() {
     const navigate = useNavigate();
     const defaultSelectedKeys = useSegmentedLocationPathNames();
@@ -30,20 +49,7 @@ function AppsContainer() {
                         {
                             key: 'apps',
                             label: '应用管理',
-                            children: [
-                                {
-                                    key: 'app0',
-                                    label: 'app0',
-                                },
-                                {
-                                    key: 'app1',
-                                    label: 'app1',
-                                },
-                                {
-                                    key: 'app2',
-                                    label: 'app2',
-                                },
-                            ],
+                            children: apps,
                         },
                     ]}
                     onClick={(item) => {
@@ -83,7 +89,13 @@ export default createBrowserRouter([
             {
                 path: 'app2',
                 element: (
-                    <micro-app name={'app2'} url='http://localhost:3000' />
+                    <micro-app name={'app2'} url='http://localhost:3000' style={{ height: '100%' }} />
+                ),
+            },
+            {
+                path: 'app3',
+                element: (
+                    <micro-app name={'app3'} iframe url='http://localhost:1342' style={{ height: '100%' }} />
                 ),
             },
         ],
